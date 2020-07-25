@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	long long int t,x,y,i;
+	scanf("%lld",&t);
+	while(t>0)
+	{
+		scanf("%lld%lld",&x,&y);
+		int a[x],b[y];
+		for(i=0;i<x;i++)
+		{
+			scanf("%lld",&a[i]);
+		}
+		for(i=0;i<y;i++)
+		{
+			scanf("%lld",&b[i]);
+		}
+		long long int m,n,c=0,j;
+		for(i=0;i<x;i++)
+		{
+			for(j=0;j<y;j++)
+			{
+				m=pow(a[i],b[j]);
+				n=pow(b[j],a[i]);
+				if(m>n)
+				{
+					c++;
+				}
+			}
+		}
+		printf("%ld\n",c);
+		t--;
+	
+		
+	}
+}
