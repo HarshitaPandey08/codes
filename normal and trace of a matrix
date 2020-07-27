@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a[100][100],i,j,s=0,t=0,m;
+	scanf("%d",&m);
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+		printf("\n");
+	}
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			s=s+a[i][j]*a[i][j];
+			if(i==j)
+			{
+				t=t+a[i][j];
+			}
+			
+		}
+	}
+	printf("trace = %d\n",t);
+	int k=sqrt(s);	
+	printf("%d",k);
+	
+}
