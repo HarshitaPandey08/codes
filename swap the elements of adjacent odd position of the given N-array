@@ -1,0 +1,60 @@
+#include<stdio.h>
+int prime(int s);
+
+int check(int s)
+{
+	if((s%2)==0)
+	{
+		return 1;
+		
+	}
+	else
+	{
+		return 0;
+	}
+}
+int prime(int s)
+{
+	int f=0,i;
+	for(i=2;i<=s/2;i++)
+	{
+		if((s%i)==0)
+		{
+			f=1;
+		}
+	}
+	if(f==0)
+	{
+		printf("\nand a prime number");
+	}
+	else
+	{
+		printf("\n but not a prime number");
+	}
+	
+}
+int main()
+{
+	int a[100],i,j,s=0,c,m;
+	scanf("%d",&m);
+	for(i=1;i<=m;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	j=a[1];
+	for(i=2;i<=m;i++)
+	{
+		if(i%2!=0)
+		{
+			int temp=a[i];
+			a[i]=a[i-2];
+			a[i-2]=temp;
+		}
+	}
+	for(i=1;i<=m;i++)
+	{
+		printf("%d",a[i]);
+	}
+
+	
+}
