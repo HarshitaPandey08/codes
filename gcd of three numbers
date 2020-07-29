@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,i,g,c,k;
+    scanf("%d%d%d",&a,&b,&c);
+    k=a>b&&a>c?a:(b>c?b:c);
+    for(i=k;i>0;i--)
+    {
+        if(a%i==0 && b%i==0 && c%i==0)
+        {
+            g=i;
+            break;
+        }
+    }
+    printf("%d",g);
+}
