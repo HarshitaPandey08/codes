@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100];
+    scanf("%s",s);
+    int l,i,j,k;
+    l=strlen(s);
+    for(i=0;i<l;i++)
+    {
+        for(j=i+1;j<l;j++)
+        {
+            if(s[i]==s[j])
+            {
+                for(k=j;k<l;k++)
+                {
+                    s[k]=s[k+1];
+                }
+                l--;
+            }
+        }
+    }
+    printf("%s",s);
+    
+}
