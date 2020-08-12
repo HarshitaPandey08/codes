@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100];
+    scanf("%[^\n]s",s);
+    for(int i=0;s[i]!='\0';i++)
+    {
+        if(s[i]!='a' && s[i]!='e'&&s[i]!='i'&&s[i]!='o'&&s[i]!='u')
+        {
+            if(s[i+1]=='a'||s[i+1]=='e'||s[i+1]=='o'||s[i+1]=='i'||s[i+1]=='u')
+            {
+                printf("%c",s[i+1]);
+            }
+            
+        }
+        else
+        {
+            continue;
+        }
+    }
+}
