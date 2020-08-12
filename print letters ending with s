@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100];
+    scanf("%[^\n]s",s);
+    int i,j=0,k,l,c;
+    l=strlen(s);
+    for(i=0;i<l;i++)
+    {
+        if(s[i]==32)
+        {
+            if(s[i-1]=='s')
+            {
+                for(k=j;k<i;k++)
+                {
+                    printf("%c",s[k]);
+                }
+                printf(" ");
+            }
+            j=i+1;
+        }
+       
+       
+    }
+}
