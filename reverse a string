@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100],*p;
+    scanf("%s",s);
+    int i;
+    i=strlen(s);
+    for(int j=i;j>=0;j--)
+    {
+        printf("%c",s[j]);
+    }
+
+    
+}
