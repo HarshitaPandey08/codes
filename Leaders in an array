@@ -1,0 +1,47 @@
+Input:
+3
+6
+16 17 4 3 5 2
+5
+1 2 3 4 0
+5
+7 4 5 7 3
+Output:
+17 5 2
+4 0
+7 7 3
+
+#include<stdio.h>
+int main()
+{
+    int t;
+    long long int n;
+    scanf("%d",&t);
+    while(t--)
+    {
+        scanf("%lld",&n);
+        long long int a[n];
+        int i,j,f;
+        for(i=0;i<n;i++)
+        {
+            scanf("%lld",&a[i]);
+        }
+        for(i=0;i<n;i++)
+        {
+            f=0;
+            for(j=i+1;j<n;j++)
+            {
+                if(a[i]<a[j])
+                {
+                    f++;
+                    break;
+                }
+            }
+            if(f==0)
+            {
+                printf("%lld ",a[i]);
+            }
+        }
+        printf("\n");
+    }
+}
