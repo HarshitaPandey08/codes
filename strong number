@@ -1,0 +1,30 @@
+#include<stdio.h>
+int fact(int r)
+{
+    int i,f=1;
+    for(i=2;i<=r;i++)
+    {
+        f=f*i;
+    }
+    return f;
+}
+int main()
+{
+    int n,i,a=0,r;
+    scanf("%d",&n);
+    i=n;
+    while(n>0)
+    {
+        r=n%10;
+        a=a+fact(r);
+        n=n/10;
+    }
+    if(a==i)
+    {
+        printf("yes");
+    }
+    else
+    {
+        printf("no");
+    }
+}
