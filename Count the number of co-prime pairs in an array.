@@ -1,0 +1,45 @@
+#include<stdio.h>
+int check(int a,int b)
+{
+    int i,f=0;
+    int c=a>b?a:b;
+    for(i=2;i<=c/2;i++)
+    {
+        if(a%i==0 && b%i==0)
+        {
+            f++;
+            break;
+        }
+    }
+    if(f==0)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+    
+}
+
+int main()
+{
+    int n,i,c=0,j;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(check(a[i],a[j])==0)
+            {
+                c++;
+            }
+        }
+    }
+    printf("%d",c);
+}
