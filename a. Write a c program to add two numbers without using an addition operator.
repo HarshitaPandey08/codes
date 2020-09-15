@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    while(y!=0)
+    {
+        int c=x&y;
+        x=x^y;
+        y=c<<1;
+    }
+    printf("%d",x);
+}
+
