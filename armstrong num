@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int n,s=0,c=0,m,r;
+    scanf("%d",&n);
+    m=n;
+    while(m>0)
+    {
+        m=m/10;
+        c++;
+    }
+    m=n;
+    while(n>0)
+    {
+        r=n%10;
+        s=s+pow(r,c);
+        n=n/10;
+    }
+    if(s==m)
+    {
+        printf("yes");
+        
+    }
+    else
+    {
+        printf("no");
+    }
+}
