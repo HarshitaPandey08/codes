@@ -1,0 +1,61 @@
+4
+3 4 1 2
+1 4 2 3
+
+5
+7 8 9 1 2
+1 9 2 8 7
+
+
+
+#include<stdio.h>
+int sort(int a[],int n)
+{
+    int i,j,k;
+    for(i=0;i<n;i++)
+    {
+        k=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(a[j]<a[k])
+            {
+                k=j;
+                
+            }
+        }
+        if(k!=i)
+        {
+            int t=a[i];
+            a[i]=a[k];
+            a[k]=t;
+            
+        }
+    }
+}
+int main()
+{
+    int n,i,j,k;
+    scanf("%d",&n);
+    int  a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    sort(a,n);
+    j=0;
+    k=n-1;
+    for(i=0;i<n;i++)
+    {
+        if(i%2==0)
+        {
+            printf("%d ",a[j]);
+            j++;
+        }
+        else 
+        {
+            printf("%d ",a[k]);
+            k--;
+        }
+        
+    }
+}
