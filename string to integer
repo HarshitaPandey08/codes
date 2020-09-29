@@ -1,0 +1,11 @@
+#include<stdlib.h>
+#include<stdio.h>
+int main()
+{
+    char s[20];
+    int n;
+    scanf("%s",s);
+    n=atoi(s);
+    printf("%d",n);
+
+}
