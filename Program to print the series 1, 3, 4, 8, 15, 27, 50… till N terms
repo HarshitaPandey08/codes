@@ -1,0 +1,24 @@
+#include<stdio.h>
+int fun(int n,int a,int b,int c)
+{
+    int i;
+    printf("%d %d %d",a,b,c);
+    if(n>3)
+    {
+        for(i=4;i<=n;i++)
+        {
+            int d=a+b+c;
+            printf(" %d",d);
+            a=b;
+            b=c;
+            c=d;
+        }
+    }
+}
+int main()
+{
+    int n,i,a=1,b=3,c=4;
+    scanf("%d",&n);
+    
+    fun(n,a,b,c);
+}
