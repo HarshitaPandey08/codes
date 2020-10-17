@@ -1,0 +1,26 @@
+input : 4567 //not an array 
+output: 2
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n,s=0,p=0,r,i=0;
+    scanf("%d",&n);
+    while(n>0)
+    {
+        r=n%10;
+        if(i%2==0)
+        {
+            s=s+r;
+        }
+        else
+        {
+            p=p+r;
+        }
+        i++;
+        n=n/10;
+    }
+    printf("%d",abs(s-p));
+}
