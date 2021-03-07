@@ -1,0 +1,45 @@
+#include<stdio.h>
+int sort(int x,int a[])
+{
+    int i,k,j;
+    for(i=0;i<x;i++)
+    {
+        k=i;
+        for(j=i+1;j<x;j++)
+        {
+            if(a[j]<a[k])
+            {
+                k=j;
+            }
+        }
+        if(i!=k)
+        {
+            int t=a[i];
+            a[i]=a[k];
+            a[k]=t;
+        }
+    }
+}
+int main()
+{
+    int x,n,i;
+    scanf("%d",&x);
+    int a[x];
+    for(i=0;i<x;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&n);
+    sort(x,a);
+    for(i=0;i<x;i++)
+    {
+        if(i==n-1)
+        {
+            printf("%d",a[i]);
+        }
+    }
+}
+5
+10 40 50 20 30
+3
+output:30
