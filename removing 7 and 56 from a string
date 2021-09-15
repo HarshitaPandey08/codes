@@ -1,0 +1,43 @@
+input:quuen7code56er
+output:quuencodeer
+#include<stdio.h>
+#include<string.h>
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char s[15];
+    scanf("%s",s);
+    int l=strlen(s);
+    int i,j;
+    for(i=0;i<=l;i++)
+    {
+        if(s[i]=='7' && s[i-1]>=97 &&s[i-1]<=122)
+        {
+            for(int j=i;j<=l;j++)
+            {
+                s[j]=s[j+1];
+
+            }
+            l--;
+            
+        }
+        else if(s[i]=='5' && s[i+1]=='6')
+        {
+            for(int j=i;j<=l;j++)
+            {
+                s[j]=s[j+2];
+
+            }
+            l=l-2;
+        }
+
+    }
+    s[i]='\0';
+    printf("%s",s);
+
+
+
+}
