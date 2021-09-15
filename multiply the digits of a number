@@ -1,0 +1,19 @@
+i/p=222
+o/p=8
+i/p=1234
+o/p=24
+
+#include<stdio.h>
+int main()
+{
+    int n,k,m=1;
+    scanf("%d",&n);
+    while(n>0)
+    {
+        k=n%10;
+        n=n/10;
+        m=m*k;
+    }
+    printf("%d",m);
+    
+}
