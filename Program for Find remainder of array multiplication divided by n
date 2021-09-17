@@ -1,0 +1,27 @@
+Input : arr[] = {100, 10, 5, 25, 35, 14}, 
+            n = 11
+Output : 9
+100 x 10 x 5 x 25 x 35 x 14 = 61250000 % 11 = 9
+
+#include<stdio.h>
+int rem(int a[],int n,int k)
+{
+    int i,m=1;
+    for(i=0;i<n;i++)
+    {
+        m=m*(a[i]%k);
+        
+    }
+    return m%k;
+}
+int main()
+{
+    int n,k,i;
+    scanf("%d%d",&n,&k);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("%d",rem(a,n,k));
+}
